@@ -82,7 +82,7 @@ class DistilBERTClass(torch.nn.Module):
 model = DistilBERTClass()
 model.to(DEVICE);
 
-model_loaded = torch.load('model/inference_models_output_4fold_distilbert_fold_best_model.pth',map_location=torch.device('cpu'))
+model_loaded = torch.load('model/inference_models_output_4fold_distilbert_fold_best_model.pth')
 
 model.load_state_dict(model_loaded['model'])
 
