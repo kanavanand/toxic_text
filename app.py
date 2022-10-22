@@ -89,7 +89,7 @@ model.load_state_dict(model_loaded['model'])
 
 val_params = {'batch_size': VALID_BATCH_SIZE,
                'shuffle': False,
-               'num_workers': 8
+    
                 }
 def give_toxic(text):
     text = "You fucker "
@@ -129,3 +129,5 @@ def give_toxic(text):
 
 def device():
     return DEVICE
+
+print(give_toxic("fuck"))
