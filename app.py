@@ -1,19 +1,19 @@
 import pandas as pd
 import torch
 from tqdm import tqdm
-from torch.utils.data import Dataset, DataLoader, RandomSampler, SequentialSampler
+from torch.utils.data import Dataset, DataLoader
 from transformers import DistilBertTokenizer, DistilBertModel
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 
 
-MAX_LEN = 512
-TRAIN_BATCH_SIZE = 16
-VALID_BATCH_SIZE = 16
-EPOCHS = 3
-LEARNING_RATE = 1e-05
-DEVICE = 'cuda:0' if torch.cuda.is_available() else 'cpu'
+# MAX_LEN = 512
+# TRAIN_BATCH_SIZE = 16
+# VALID_BATCH_SIZE = 16
+# EPOCHS = 3
+# LEARNING_RATE = 1e-05
+# DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 
 # tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased', truncation=True, do_lower_case=True)
