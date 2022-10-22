@@ -3,7 +3,8 @@ import torch
 from tqdm import tqdm
 from torch.utils.data import Dataset, DataLoader, RandomSampler, SequentialSampler
 from transformers import DistilBertTokenizer, DistilBertModel
-
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 
 
 
