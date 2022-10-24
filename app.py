@@ -115,7 +115,6 @@ def give_toxic(text):
 
                 all_test_pred.append(probas)
 
-
     probas = test(model)
 
     all_test_pred = torch.cat(all_test_pred)
