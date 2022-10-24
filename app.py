@@ -82,7 +82,7 @@ class DistilBERTClass(torch.nn.Module):
 model = DistilBERTClass()
 model.to(DEVICE);
 
-model_loaded = torch.load('model/inference_models_output_4fold_distilbert_fold_best_model.pth',map_location=torch.device('cpu'))
+model_loaded = torch.load('model/inference_models_output_4fold_distilbert_fold_best_model.pth')
 
 model.load_state_dict(model_loaded['model'])
 
@@ -92,7 +92,7 @@ val_params = {'batch_size': VALID_BATCH_SIZE,
     
                 }
 def give_toxic(text):
-    text = "You fucker "
+    # text = "You fucker "
     test_data = pd.DataFrame([text],columns=['comment_text'])
     test_set = MultiLabelDataset(test_data, tokenizer, MAX_LEN, new_data=True)
     test_loader = DataLoader(test_set, **val_params)
